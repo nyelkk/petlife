@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+header{
+    width: 100%;
+    background-color: #FA956C;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.205);
+    position: fixed;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+}
+header img{
+    filter: brightness(0) invert(1);
+}
+header nav a{
+    color: rgb(253, 253, 253);
+    margin: 0 10px 0 10px;
+}
+
+main #inicio{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5vw;
+}
+main #inicio h1{
+    font-size: 3vw;
+    line-height: 7vh;
+    margin-bottom: 2vh;
+}
+main #inicio .buttons{
+    display: flex;
+    margin-top: 5vh;
+    gap: 20px;
+}
+main #inicio .buttons a{
+    font-size: 1vw;
+    background-color: rgb(255, 121, 103);
+    color: rgb(252, 252, 252);
+    padding: 10px;
+    border-radius: 10px;
+    transition: .6s;
+}
+main #inicio .buttons a:hover{
+    transform: translateY(-2px);
+    opacity: .8;
+}
+main #inicio .back{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+main #clinica{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+main #clinica h2{
+    font-size: 3vw;
+    line-height: 5.5vh;
+    max-width: 70%;
+    margin: 0 0 5% 0
+}
+main #clinica p{
+    padding: 20px 0 30px 0px;
+}
+main #clinica li{
+    font-size: 1vw;
+    margin: 16px 16px 16px 40px;
+}
+
+main #farmacia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+main #farmacia p{
+    max-width: 60vw;
+    padding: 2vw;
+    text-align: center;
+}
+
+main #duvidas{
+    display: flex;
+    align-items: center;
+    padding: 64px 80px;
+    gap: 80px;
+}
+.duvida{
+    margin: 0px 0px 20px 0;
+    position: relative;
+}
+.duvida.ativa p{
+    height: fit-content;
+    opacity: 1;
+    padding: 24px;
+}
+.duvida h3{
+    font-size: 100%;
+    border: 2px solid rgba(255, 137, 69, 0.507);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 20px;
+}
+.duvida img{
+    position: absolute;
+    top:28px;
+    right: 24px;
+    cursor: pointer;
+}
+.duvida p{
+    border-right: 1px solid rgba(255, 137, 69, 0.507);
+    border-bottom: 1px solid rgba(255, 137, 69, 0.507);
+    border-left: 1px solid rgba(255, 137, 69, 0.507);
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+footer{
+    background-color: rgb(255, 152, 108);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 34px;
+    gap: 80px;
+}
+footer img{
+    filter: brightness(0) invert(1);
+}
+footer .links{
+    display: flex;
+    flex-direction: column;
+}
+footer div p{
+    max-width: 50%;
+}
+#copy{
+    width: 100%;
+    color: #fafafa;
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+}
+#copy a{
+    color: #FA956C;
+}
