@@ -7,9 +7,11 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 body{
+    color: #272727;
     background-color: #fafafa;
 }
 
@@ -30,6 +32,11 @@ header img{
 header nav a{
     color: rgb(253, 253, 253);
     margin: 0 10px 0 10px;
+    transition: .5s;
+}
+header nav a:hover{
+    transform: translateY(-2px);
+    opacity: .8;
 }
 
 main #inicio{
@@ -72,7 +79,7 @@ main #clinica{
     display: flex;
     align-items: center;
     gap: 64px;
-    padding: 64px 80px;
+    padding: 80px;
 }
 main #clinica h2{
     font-size: 3vw;
@@ -104,7 +111,7 @@ main #farmacia p{
 main #duvidas{
     display: flex;
     align-items: center;
-    padding: 64px 80px;
+    padding: 80px;
     gap: 80px;
 }
 .duvida{
@@ -143,29 +150,106 @@ main #duvidas{
 }
 
 footer{
-    background-color: rgb(255, 152, 108);
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 34px;
-    gap: 80px;
+    justify-content: center;
 }
-footer img{
-    filter: brightness(0) invert(1);
+footer h2{
+    font-size: 1vw;
+    padding: 10px;
+    opacity: .9;
 }
-footer .links{
-    display: flex;
-    flex-direction: column;
+
+
+@media only screen and (max-width: 600px) {
+    header nav{
+        display: none;
+    }
+    header img{
+        padding: 10%;
+    }
+    main #inicio{
+        flex-direction: column;
+        padding: 10vw;
+    }
+    main #inicio img{
+        width: 100%;
+        bottom: 0;
+    }
+    main #inicio #main{
+        width: 100%;
+        height: fit-content;
+        margin-top: 7vh;
+    }
+    main #inicio h1{
+        font-size: 8vw;
+        line-height: 5vh;
+        margin-bottom: 2vh;
+    }
+    main #inicio .buttons a{
+        font-size: 3vw;
+        border-radius: 8px;
+    }
+
+    main #clinica{
+        flex-direction: column;
+        gap: 0;
+        padding: 10vw;
+    }
+    main #clinica h2{
+        font-size: 8vw;
+        line-height: 5.5vh;
+        max-width: 80%;
+        margin: 0 0 3% 0
+    }
+    main #clinica li{
+        font-size: 4vw;
+    }
+    main #clinica img{
+        width: 100%;
+        margin-top: -12vh;
+    }
+
+    main #farmacia{
+        height: 60vh;
+        padding: 10vw;
+        margin-top: -12vh;
+        justify-content: space-evenly;
+    }
+    main #farmacia img{
+        width: 100%;
+    }
+    main #farmacia p{
+        display: none;
+    }
+
+    main #duvidas{
+        padding: 10vw;
+        margin-top: -5vh;
+        flex-direction: column-reverse;
+    }
+    main #duvidas #image-main{
+        display: none;
+    }
+    main #duvidas h2{
+        font-size: 100%;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+    .duvida h3{
+        font-size: 3vw;
+        border: 2px solid rgba(255, 137, 69, 0.507);
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 15px;
+    }
+    .duvida.ativa p{
+        font-size: 3vw;
+    }
+
+    footer h2{
+        font-size: 2vw;
+    }
 }
-footer div p{
-    max-width: 50%;
-}
-#copy{
-    width: 100%;
-    color: #fafafa;
-    background-color: rgb(20, 20, 20);
-    text-align: center;
-}
-#copy a{
-    color: #FA956C;
-}
+
